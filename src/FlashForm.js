@@ -34,7 +34,7 @@ class FlashForm extends React.Component {
             value={this.state.answer} 
             onChange={this.handleChange}
           />
-          <Form.Button>Submit</Form.Button>
+          <Form.Button color="blue">Submit</Form.Button>
         </Form.Group>
       </Form>
     )

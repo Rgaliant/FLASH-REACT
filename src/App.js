@@ -35,17 +35,18 @@ class App extends Component {
   render() {
     return (
       <Container style={{ paddingTop: "25px" }}>
-        <Header as="h1">Flash Cards</Header>
+        <Header as="h1" style={{ marginLeft: "45%" }}>Flash Cards</Header>
         <br />
         <Segment basic>
-          <Button icon color="blue" onClick={this.toggleForm}>
+          <Button icon color="blue" onClick={this.toggleForm} style={{ marginLeft: "45%" }}>
             <Icon name='angle double down' />
           </Button>
-          {/* { this.state.showForm ? <FlashForm add={this.flash.answer} /> : null } */}
+          { this.state.showForm ? <FlashForm add={this.addFlash} style={{ marginLeft: "45%" }} /> : null }
+          
         </Segment>
         <Flashes flashes={this.state.flashes} remove={this.removeFlash} />
         <br />
-        <FlashForm add={this.addFlash} />
+        
       </Container>
     );
   }

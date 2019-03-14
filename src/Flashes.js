@@ -4,7 +4,6 @@ import Flash from './Flash'
 
 
 
-
 const Flashes = ({ flashes, remove }) => (
 
   <Container text>
