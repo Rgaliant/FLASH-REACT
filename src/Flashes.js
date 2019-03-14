@@ -2,6 +2,9 @@ import React from "react";
 import { Button, Container, Segment } from "semantic-ui-react";
 import Flash from './Flash'
 
+
+
+
 const Flashes = ({ flashes, remove }) => (
 
   <Container text>
