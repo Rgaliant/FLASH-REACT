@@ -1,8 +1,12 @@
-import React, { Component } from 'react';
+import React, { Component, Fragment } from 'react';
 import './App.css';
 import { Container, Header, Segment, Button, Icon } from "semantic-ui-react"; 
 import Flashes from './Flashes'
 import FlashForm from './FlashForm'
+import Home from './components/Home';
+import { Route, Switch } from 'react-router-dom';
+import NoMatch from './components/NoMatch';
+import Navbar from "./components/Navbar";
 
 class App extends Component {
   state = {
@@ -34,7 +38,14 @@ class App extends Component {
 
   render() {
     return (
+      <Fragment>
+        <Navbar />
+        <Switch>
+        
+         
+        <Route exact path="/home" component={Home} />
       <Container style={{ paddingTop: "25px" }}>
+      
         <Header as="h1" style={{ marginLeft: "45%" }}>Flash Cards</Header>
         <br />
         <Segment basic>
@@ -46,8 +57,9 @@ class App extends Component {
         </Segment>
         <Flashes flashes={this.state.flashes} remove={this.removeFlash} />
         <br />
-        
       </Container>
+      </Switch>
+      </Fragment>
     );
   }
 }
